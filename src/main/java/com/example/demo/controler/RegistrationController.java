@@ -1,6 +1,7 @@
 package com.example.demo.controler;
 
 
+import com.example.demo.domain.Role;
 import com.example.demo.domain.User;
 import com.example.demo.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +33,9 @@ public class RegistrationController {
 		}
 
 		user.setActive(true);
-//		user.getRoles(Collections.singleton());
+		user.setRoles(Collections.singleton(Role.USER));
 		userRepo.save(user);
+
 		return "redirect:/login";
 	}
 }

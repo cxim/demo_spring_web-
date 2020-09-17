@@ -37,7 +37,7 @@ public class MainController {
 		return "main";
 	}
 
-	@PostMapping("/filter")
+	@PostMapping("filter")
 	public String filter(@RequestParam String filter, Map<String, Object> model) {
 		Iterable<Message> messages;
 		if (filter != null && !filter.isEmpty()) {
