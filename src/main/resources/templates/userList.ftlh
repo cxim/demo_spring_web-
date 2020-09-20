@@ -1,13 +1,15 @@
 <#import 'parts/common.ftlh' as c>
 
 <@c.page>
+	<a href="/main">To main page</a>
+	<br/>
 	List Of Users
 	<table>
 		<thead>
 		<tr>
 			<th>Name</th>
 			<th>Role</th>
-			<th></th>
+			<th>Action</th>
 		</tr>
 		</thead>
 		<tbody>

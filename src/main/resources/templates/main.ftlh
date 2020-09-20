@@ -4,6 +4,7 @@
 <@c.page>
     <div>
         <@l.logout />
+        <span><a href="/user">Adm panel</a></span>
     </div>
 
     <div>
@@ -16,7 +17,7 @@
     </div>
 
     <form method="get" action="/main">
-        <input type="text" name="filter" placeholder="find by tag">
+        <input type="text" name="filter" value="${filter!}" placeholder="find by tag">
         <button type="submit">Find</button>
     </form>
 
