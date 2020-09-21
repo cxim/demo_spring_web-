@@ -33,9 +33,12 @@ public class RegistrationController {
 		}
 
 		user.setActive(true);
-		user.setRoles(Collections.singleton(Role.USER));
+		if (user.getUsername().equals("ADMIN")) {
+			user.setRoles(Collections.singleton(Role.ADMIN));
+		} else {
+			user.setRoles(Collections.singleton(Role.USER));
+		}
 		userRepo.save(user);
-
 		return "redirect:/login";
 	}
 }

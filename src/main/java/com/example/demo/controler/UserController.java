@@ -4,6 +4,7 @@ import com.example.demo.domain.Role;
 import com.example.demo.domain.User;
 import com.example.demo.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/user")
+@PreAuthorize("hasAuthority('ADMIN')")
 public class UserController {
 	@Autowired
 	private UserRepo userRepo;
