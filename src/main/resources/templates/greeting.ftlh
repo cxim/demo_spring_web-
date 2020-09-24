@@ -1,6 +1,7 @@
 <#import 'parts/common.ftlh' as c>
 
 <@c.page>
-	<div>Hello, user plz auth here -> </div>
-	<a href="/main">Page Auth</a>
+	<h5>Hello ${user}</h5>
+
+	<div>Demo version</div>
 </@c.page>
