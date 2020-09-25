@@ -14,7 +14,11 @@
 				<a class="nav-link" href="/">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/main">Messages</a>
+				<#if name == "Unknown">
+					<a class="nav-link" href="/login">Login</a>
+				<#else>
+					<a class="nav-link" href="/main">Message</a>
+				</#if>
 			</li>
 			<#if isAdmin>
 			<li class="nav-item">
