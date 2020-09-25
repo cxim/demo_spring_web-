@@ -1,4 +1,6 @@
 <#include "security.ftlh">
+<#import "login.ftlh" as l>
+
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="/">Demo</a>
@@ -20,7 +22,7 @@
 			</li>
 			</#if>
 		</ul>
-		<div class="navbar-text">${name}</div>
-
+		<div class="navbar-text mr-3">${name}</div>
+        <@l.logout />
 	</div>
 </nav>

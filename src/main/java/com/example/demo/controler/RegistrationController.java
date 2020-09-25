@@ -33,7 +33,7 @@ public class RegistrationController {
 		}
 
 		user.setActive(true);
-		if (user.getUsername().equals("ADMIN")) {
+		if (user.getUsername().toLowerCase().equals("admin")) {
 			user.setRoles(Collections.singleton(Role.ADMIN));
 		} else {
 			user.setRoles(Collections.singleton(Role.USER));
