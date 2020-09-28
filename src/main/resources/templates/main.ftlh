@@ -17,10 +17,10 @@
         <div class="form-group mt-3">
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="text" placeholder="Input message" />
+                    <input type="text" class="form-control" name="text" placeholder="Введите сообщение" />
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="tag" placeholder="Tag">
+                    <input type="text" class="form-control" name="tag" placeholder="Тэг">
                 </div>
                 <div class="form-group">
                     <div class="custom-file">
@@ -30,11 +30,12 @@
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">send message</button>
+                    <button type="submit" class="btn btn-primary">Добавить</button>
                 </div>
             </form>
         </div>
     </div>
+
     <div class="card-columns">
     <#list messages as message>
         <div class="card my-3" style="width: 18rem;">
